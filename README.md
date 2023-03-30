@@ -11,7 +11,7 @@ Para el diseño se instaló Bootstrap con el fin de realizar de manera más ági
 En este repositorio se encuentra todo el programa, en caso de desacargarlo es necesario la instalación de la carpeta node_modules (npm install) y se puede correr el servidor del localhost mediante ng serve, teniendo instalado Angular CLI.
 Adjunto link de netlify en caso de querer probar la aplicación de manera rápida en el navegador.
 
-https://picoyplaca.netlify.app/home
+picoyplaca.netlify.app/home
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
