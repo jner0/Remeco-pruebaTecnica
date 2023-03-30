@@ -14,6 +14,7 @@ export class FormComponent implements OnInit{
     this.formModel = new FormGroup({
       placa: new FormControl('',[
         Validators.required,
+        Validators.pattern(/^[a-zA-Z]{3}-\d{3}\d{0,1}$/)
       ]),
 
       fecha: new FormControl('',[
@@ -58,8 +59,10 @@ export class FormComponent implements OnInit{
     let mensaje: string = "";
     if (aplicaPicoPlaca && !puedeCircular) {
       mensaje = "No puede circular debido a la restricción de Pico y Placa.";
+      alert(mensaje);
     } else {
       mensaje = "Puede circular sin restricciones.";
+      alert(mensaje);
     }
 
     console.log(mensaje);

@@ -7,7 +7,12 @@
             <label for="placa" class="form-label mt-2">Número de placa</label>
             <input type="text" class="form-control mt-2" id="placa" formControlName="placa">
             <p class="error" *ngIf="checkControl('placa','required')">Campo Requerido</p>
-            <!-- <p class="error" *ngIf="checkControl('first_name','minlength')">El nombre debe tener al menos 3 caracteres</p> -->
+            <div class="error" *ngIf="checkControl('placa','pattern')">
+                <p>Necesario:</p>
+                <ul>
+                    <li>Ejemplo de Formato Correcto: AAA-1234</li>
+                </ul>
+            </div>
         </div>
 
         <div class="my-2">
