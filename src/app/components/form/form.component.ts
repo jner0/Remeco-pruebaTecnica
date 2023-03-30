@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-form',
@@ -56,16 +57,22 @@ export class FormComponent implements OnInit{
   }
 
     // Construimos el mensaje de acuerdo al resultado de la verificación
-    let mensaje: string = "";
     if (aplicaPicoPlaca && !puedeCircular) {
-      mensaje = "No puede circular debido a la restricción de Pico y Placa.";
-      alert(mensaje);
+      Swal.fire({
+        icon: 'error',
+        title: "No puede circular debido a la restricción de Pico y Placa.",
+        text: 'Horario de lunes a Viernes: 7:00 a.m. - 9:30 a.m / 4:00 p.m - 21:00 p.m / Fines de semana no aplica',
+        imageUrl: './assets/images/image002.png'
+      })
     } else {
-      mensaje = "Puede circular sin restricciones.";
-      alert(mensaje);
+      Swal.fire({
+        icon: 'success',
+        title: "Puede circular sin restricciones.",
+        text: 'Horario de lunes a Viernes: 7:00 a.m. - 9:30 a.m / 4:00 p.m - 21:00 p.m / Fines de semana no aplica',
+        imageUrl: './assets/images/image002.png'
+      })
     }
 
-    console.log(mensaje);
   }
 
 
