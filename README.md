@@ -1,5 +1,16 @@
 # PredictorPicoplaca
 
+Proyecto Realizado como prueba técnica para la empresa REMECO, se crea un predictor de Pico y Placa, el cual recibe el número de placa, una fecha y una hora, el programa retorna si el automovil puede o no circular en la carretera.
+
+# Detalles del programa
+
+El desarrollo se realizó usando Angular para la generación del proyecto junto con TypeScript como lenguaje principal. Se crearon diferentes componentes, tomando en cuenta la interfaz gráfica para el proyecto y mediante la característica de Angular Routing se realizan las rutas disponibles.
+
+Para el diseño se instaló Bootstrap con el fin de realizar de manera más ágil toda la interfaz y tambien se usó SweetAlert para poder customizar los mensajes de alertas.
+
+En este repositorio se encuentra todo el programa, en caso de desacargarlo es necesario la instalación de la carpeta node_modules (npm install) y se puede correr el servidor del localhost mediante ng serve, teniendo instalado Angular CLI.
+Adjunto link de netlify en caso de querer probar la aplicación de manera rápida en el navegador.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
 
 ## Development server
