@@ -1,1 +1,34 @@
-<p>form works!</p>
+<section class="container mt-3">
+    
+    <!--FORMULARIO-->
+
+    <form [formGroup]="formModel" class="mt-4" (ngSubmit)="getDataForm()">
+        <div class="my-2">
+            <label for="placa" class="form-label mt-2">Número de placa</label>
+            <input type="text" class="form-control mt-2" id="placa" formControlName="placa">
+            <p class="error" *ngIf="checkControl('placa','required')">Campo Requerido</p>
+            <!-- <p class="error" *ngIf="checkControl('first_name','minlength')">El nombre debe tener al menos 3 caracteres</p> -->
+        </div>
+
+        <div class="my-2">
+            <label for="fecha" class="form-label mt-2">Fecha</label>
+            <input type="date" class="form-control mt-2" id="fecha" formControlName="fecha">
+            <p class="error" *ngIf="checkControl('fecha','required')">Campo Requerido</p>
+        </div>
+
+        <div class="my-2">
+            <label for="hora" class="form-label mt-2">Hora</label>
+            <input type="time" class="form-control mt-2" id="hora" formControlName="hora">
+            <p class="error" *ngIf="checkControl('hora','required')">Campo Requerido</p>
+            <!-- <p class="error" *ngIf="checkControl('email','pattern')">El formato del email no es correcto</p> -->
+        </div>
+
+        
+        <input type="submit" value="Consultar" class="btn btn-primary mt-2" [disabled]="!formModel.valid">
+        
+        <!--{{formModel.valid}} -->
+
+    </form>
+
+
+</section>
